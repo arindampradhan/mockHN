@@ -1,8 +1,9 @@
-A django website powered by [yaaHN](https://github.com/arindampradhan/yaaHN)
-![yaaHN API](https://github.com/arindampradhan/yaaHN/blob/master/hn.png)
+A django website powered by [yaaHN](https://github.com/arindampradhan/yaaHN) .
+
 
 
 ## Looks like
+![yaaHN API](https://github.com/arindampradhan/yaaHN/blob/master/hn.png)
 
 ![yaaHN API](https://github.com/arindampradhan/mockHN/blob/master/mock_hn.png)
 
