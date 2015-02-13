@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load rand_img %}
+{% block user %}
+      <div class="row">
+        <div class="col s12 m3 l2"></div>
+        <div class="col s12 m6">
+          <div class="card z-depth-5 orange darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">
+              <img src="/static/img/face{{ faces|random }}.jpg" alt="userface" class="circle" height="42" width="42">
+              {{user.id}}
+              </span>
+              <p>{{user.about}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#"><span>Created: {{user.created}}</span></a>
+              <a href='#'><span>Karma: {{user.karma}}</span></a>
+            </div>
+          </div>
+        </div>
+      </div>  
+{% endblock %}

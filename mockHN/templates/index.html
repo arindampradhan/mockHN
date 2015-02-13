@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+<ul class="collapsible" data-collapsible="accordion">
+{% for story in topstories %}
+    <li>
+      <div class="collapsible-header waves-effect waves-teal">
+      <i class="{{icons|random}}"></i>
+      <span class="pink-text text-darken-3" id="go">{{story.title}}</span>
+      <span class="badge">{{story.score}}</span>
+      </i>
+      </div>
+      <div class="collapsible-body">
+        <div class="section" align="center">
+          <h5>
+            <a href="{{story.url}}">Link</a> - by <a href="/user/{{story.by}}" class="red-text accent-2">{{story.by}}</a>
+          </h5>
+        </div>
+      </div>
+    </li>
+{% endfor %}
+<br>
+<div class="container">
+<form action="{% url 'mockHN.views.story_handle' %}" method="POST">{% csrf_token %}
+  <p class="range-field">
+    <input type="range" min="0" max="100" />
+  </p>
+</form>
+</div>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s4"><a href="/page1">Page 1</a></li>
+        <li class="tab col s4"><a href="/page2">Page 2</a></li>
+        <li class="tab col s4"><a href="/page3">Page 3</a></li>
+      </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mockHN</title>
+  <link href="/static/css/materialize.min.css" rel="stylesheet">
+  <link href="/static/css/custom.css" rel="stylesheet">  
+  <link href="/static/css/materialize.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body class="Site">
+<main class="Site-content">
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper yellow darken-4">
+      <a href="#" class="brand-logo waves-effect waves-light">Hacker News</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="waves-effect waves-light"><a href="/">Topstories</a></li>
+        <li class="waves-effect waves-light"><a href="#">Updates</a></li>
+      </ul>
+    </div>
+  </nav>  
+</div>
+{% block content %}  
+{% endblock %}
+{% block comment %}
+{% endblock %}
+{% block user %}
+{% endblock %}
+{% block story %}
+{% endblock %}
+</main>
+
+ <footer class="page-footer yellow darken-4">
+  <div class="footer-copyright">
+    <div class="container">
+      © 2015 Arindam Pradhan
+        <a class="grey-text text-lighten-4 right" href="#!"><a href="http://materializecss.com/about.html"></a>Materialize</a>
+    </div>
+</footer>
+</div>  
+<!-- javascript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
+</html>

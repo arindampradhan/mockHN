@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block story %}
+      <div class="row">
+        <div class="col s12 m8">
+          <div class="card pink accent-3">
+            <div class="card-content white-text">
+              <span class="card-title">
+                <img src="/static/img/face{{ faces|random }}.jpg" alt="userface" class="circle" height="42" width="42">
+              <a href="/user/{{comment.by}}">{{story.by}}</a>
+              </span>
+              <p><h4><a href="{{story.url}}">{{story.title}}</a></h3></p>
+            </div>
+            <div class="card-action">
+              <span style="color:white">Time : {{time}}</span>  
+              <span style="color:white">Upvotes : {{story.score}}</span>  
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
